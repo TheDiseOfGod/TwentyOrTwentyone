@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>face</title>
+	<style>
+		#head{
+			position: relative;
+			width: 480px;
+			height: 480px;
+			overflow: hidden;
+		}
+		#face{
+			position: absolute;
+			background-image:url("face.jpg");
+			background-repeat: no-repeat;
+			
+			width: 480px;
+			height:8160px;
+		}
+		
+	</style>
+</head>
+<body>
+	<div id="head"><div id="face"></div></div>
+	
+	<script>
+   var face = document.getElementById('face');
+   var i=0;
+    var s=setInterval("run()", 20);
+   function run(){
+   	 		i-=10;
+   	 		if(i==-8160){	
+    			i=0;
+    			 face.style.top=String(i)+'px'; 
+    		}	
+       	      face.style.top=String(i)+'px'; 
+    		 console.log(face.style.top); 
+    			   
+    }
+	</script>
+</body>
+</html>
